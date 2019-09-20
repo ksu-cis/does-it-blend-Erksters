@@ -12,6 +12,7 @@ namespace DoesItBlend
             blendables.Add(new Banana());
             blendables.Add(new CellPhone());
             blendables.Add(new IceCubes());
+            blendables.Add(new Mango());
 
             String mess = "";
             foreach(dynamic ingredient in blendables)
