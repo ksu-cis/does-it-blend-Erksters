@@ -7,20 +7,17 @@ namespace DoesItBlend
     {
         static void Main(string[] args)
         {
-            List<Fruit> blendables = new List<Fruit>();
-            Strawberry St = new Strawberry();
-            Banana Ba = new Banana();
+            List<IBlendable> blendables = new List<IBlendable>();
             blendables.Add(new Strawberry());
             blendables.Add(new Banana());
-            Console.WriteLine(St.Blend());
-            blendables.Add(St);
+            blendables.Add(new CellPhone());
+            blendables.Add(new IceCubes());
 
             String mess = "";
-            foreach(Fruit ingredient in blendables)
+            foreach(dynamic ingredient in blendables)
             {
-                mess += ingredient.Blend();
+                Console.WriteLine(ingredient.Blend());
             }
-            Console.WriteLine(mess);
         }
     }
 }
